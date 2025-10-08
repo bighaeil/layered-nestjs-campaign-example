@@ -1,7 +1,7 @@
 import { Controller, Post, Body } from '@nestjs/common';
-import { CampaignService } from './campaign.service';
+import { CampaignService } from './core/campaign.service';
 
-@Controller('/campaigns')
+@Controller('campaigns')
 export class CampaignController {
   constructor(private readonly campaignService: CampaignService) {}
 

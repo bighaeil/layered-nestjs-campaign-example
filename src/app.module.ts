@@ -1,7 +1,11 @@
 import { Module } from '@nestjs/common';
-import { CampaignModule } from './modules/campaign/campaign.module';
+import { CoreModule } from './core/core.module';
+import { PushModule } from './plugins/push/push.module';
+import { AuditModule } from './plugins/audit/audit.module';
+import { CampaignController } from './campaign.controller';
 
 @Module({
-  imports: [CampaignModule],
+  imports: [CoreModule, PushModule, AuditModule],
+  controllers: [CampaignController],
 })
 export class AppModule {}

@@ -1,7 +1,9 @@
-# Modular Monolith NestJS Campaign Example
+# Microkernel NestJS Campaign Example
 
-이 예제는 **모듈러 모놀리스 아키텍처**를 NestJS로 구현한 프로젝트입니다.  
-도메인: 알림 캠페인 즉시 발송 (Push 로그 기반)
+NestJS 기반 **마이크로커널 아키텍처** 예제 프로젝트입니다.  
+공통 도메인은 **알림 캠페인 즉시 발송**이며, Core + Plugin 구조로 구현했습니다.
+- Notification Plugin (Push)
+- Audit Plugin (Audit Log)
 
 ---
 
@@ -9,17 +11,17 @@
 
 1. 캠페인 생성
 2. 발송 가능한 회원 목록 조회
-3. Push 채널 발송 (실제 발송 대신 `console.log`)
-4. 감사 로그 기록
+3. Notification Plugin을 통한 Push 발송
+4. Audit Plugin을 통한 감사 로그 기록
 
 ---
 
 ## 🏗 아키텍처 스타일
 
-- **Modular Monolith**
-  - 도메인별 모듈 분리 (Campaign / Member / Push / Audit)
-  - 모듈 간 통신은 Service 의존성을 통한 명시적 호출
-  - DDD의 Bounded Context 개념과 유사하게 경계를 유지
+- **Microkernel**
+  - Core: 캠페인, 회원, 계약(interfaces/tokens)
+  - Plugins: Push, Audit
+  - Plugin 교체 및 확장 용이
 
 ---
 

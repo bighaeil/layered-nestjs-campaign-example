@@ -23,6 +23,19 @@ NestJS 기반 **레이어드 아키텍처** 예제 프로젝트입니다.
 
 ---
 
+## 🧩 프로젝트 구조
+
+```
+src/
+  notification/
+    controllers/   # Controller 레이어
+    services/      # Service 레이어
+    repositories/  # Repository 레이어
+    entities/      # Entity 정의
+```
+
+---
+
 ## 🚀 실행 방법
 
 ```bash

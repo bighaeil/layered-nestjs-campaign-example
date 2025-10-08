@@ -1,4 +1,4 @@
-import { AuditLog } from '../entities/audit.entity';
+import { AuditLog } from './audit.entity';
 
 export class AuditRepository {
   private logs: AuditLog[] = [];

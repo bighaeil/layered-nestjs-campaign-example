@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { CampaignRepository } from '../repositories/campaign.repository';
-import { MemberService } from './member.service';
-import { PushService } from './push.service';
-import { AuditService } from './audit.service';
-import { Campaign } from '../entities/campaign.entity';
+import { CampaignRepository } from './campaign.repository';
+import { MemberService } from '../member/member.service';
+import { PushService } from '../push/push.service';
+import { AuditService } from '../audit/audit.service';
+import { Campaign } from './campaign.entity';
 
 @Injectable()
 export class CampaignService {

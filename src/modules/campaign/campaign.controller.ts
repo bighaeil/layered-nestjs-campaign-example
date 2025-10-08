@@ -1,5 +1,5 @@
 import { Controller, Post, Body } from '@nestjs/common';
-import { CampaignService } from '../services/campaign.service';
+import { CampaignService } from './campaign.service';
 
 @Controller('/campaigns')
 export class CampaignController {

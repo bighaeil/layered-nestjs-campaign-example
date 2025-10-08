@@ -1,4 +1,4 @@
-import { Campaign } from '../entities/campaign.entity';
+import { Campaign } from './campaign.entity';
 
 export class CampaignRepository {
   private campaigns: Campaign[] = [];

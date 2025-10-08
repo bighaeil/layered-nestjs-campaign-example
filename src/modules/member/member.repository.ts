@@ -1,4 +1,4 @@
-import { Member } from '../entities/member.entity';
+import { Member } from './member.entity';
 
 export class MemberRepository {
   private members: Member[] = [

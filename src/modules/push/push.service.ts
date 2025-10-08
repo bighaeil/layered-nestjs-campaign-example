@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Member } from '../entities/member.entity';
+import { Member } from '../member/member.entity';
 
 @Injectable()
 export class PushService {

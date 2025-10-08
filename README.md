@@ -1,7 +1,7 @@
-# Layered NestJS Campaign Example
+# Modular Monolith NestJS Campaign Example
 
-NestJS 기반 **레이어드 아키텍처** 예제 프로젝트입니다.  
-공통 도메인은 **알림 캠페인 즉시 발송**이며, 실제 발송은 Push 로그로 대체합니다.
+이 예제는 **모듈러 모놀리스 아키텍처**를 NestJS로 구현한 프로젝트입니다.  
+도메인: 알림 캠페인 즉시 발송 (Push 로그 기반)
 
 ---
 
@@ -16,10 +16,10 @@ NestJS 기반 **레이어드 아키텍처** 예제 프로젝트입니다.
 
 ## 🏗 아키텍처 스타일
 
-- **Layered Architecture**
-    - Controller → Service → Repository → Entity
-    - 단순하고 직관적인 구조
-    - 소규모 프로젝트/MVP에 적합
+- **Modular Monolith**
+  - 도메인별 모듈 분리 (Campaign / Member / Push / Audit)
+  - 모듈 간 통신은 Service 의존성을 통한 명시적 호출
+  - DDD의 Bounded Context 개념과 유사하게 경계를 유지
 
 ---
 

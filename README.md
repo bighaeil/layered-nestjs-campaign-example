@@ -25,6 +25,25 @@ NestJS 기반 **마이크로커널 아키텍처** 예제 프로젝트입니다.
 
 ---
 
+## 🧩 프로젝트 구조
+
+```
+src/
+  app.module.ts            # Core + Plugin 조합
+  campaign.controller.ts   # API 엔드포인트
+
+  core/                    # 핵심(Core)
+    campaign.service.ts    # 비즈니스 로직
+    plugin.contracts.ts    # 플러그인 계약 정의
+
+  plugins/                 # 플러그인(확장)
+    push/                  # Push 발송 구현
+    audit/                 # Audit 로그 구현
+
+```
+
+---
+
 ## 🚀 실행 방법
 
 ```bash
